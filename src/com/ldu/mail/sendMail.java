@@ -10,7 +10,7 @@ public class sendMail {
 	String password = "159486ren"; // 邮件服务器登录密码 授权码！！！
 	String from = "renhong_qiang@163.com"; // 发送人邮件地址
 	String to = "1745012159@qq.com"; // 接受人邮件地址
-	String subject = "CTMS社团管理紫铜"; // 邮件标题
+	String subject = "CTMS社团管理系统"; // 邮件标题
 	String body = "JavaMail 电子邮件发送系统"; // 邮件内容
 	String num;		//随机验证码
 	public sendMail(String to,String num)

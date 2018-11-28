@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <% 
     	//重置登录记录
-    	session.setAttribute("User","no");
+    	session.setAttribute("userName","no");
     	response.sendRedirect("login.html");
     %>
   </body>

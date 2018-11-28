@@ -9,6 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
+    <title>导航</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -17,10 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<meta charset="utf-8">
-    <title>CTMS</title>
-	
-    <link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont1.css">
 	
@@ -28,15 +27,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="js/nav.js"></script>
   </head>
   
-<body>
-	<% 
+  <body>
+  	<% 
 		String userName=(String)session.getAttribute("userName");
 		String usernum=(String)session.getAttribute("usernum");
 		if(userName == null || userName.equalsIgnoreCase("no")){
 			out.print("<script language='javascript'>alert('请先登录!');window.location.href='login.html';</script>"); 
      	}
 	%>
-<div class="container">
+	
     <div class="nav">
         <div class="nav-top">
             <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)">
@@ -53,8 +52,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class="nav-item">
                 <a href="javascript:;"><i class="iconfont icon-diqiu"></i><span>社团动态</span><i class="my-icon nav-more"></i></a>
                 <ul>
-                    <li><a href="/ctms/pageOne/a.html" target= "iFrame1"><span>社团简介</span></a></li>
-                    <li><a href="/ctms/pageOne/b.html" target= "iFrame1"><span>社团活动</span></a></li>
+                    <li><a href="/ctms/pageOne/a.html" target="iFrame1"><span>社团简介</span></a></li>
+                    <li><a href="/ctms/pageOne/b.html" target="iFrame1"><span>社团活动</span></a></li>
                     <li><a href="javascript:;"><span>通知公告</span></a></li>
                     <li><a href="javascript:;"><span>缴费AA</span></a></li>
                 </ul>
@@ -102,10 +101,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </li>
         </ul>
     </div>
-    
-    <div class="maindiv">
-            <iframe id="frameContentRight" name="iFrame1" src="/ctms/pageOne/a.html"></iframe>
-    </div>
-</div>
-</body>
+  </body>
 </html>

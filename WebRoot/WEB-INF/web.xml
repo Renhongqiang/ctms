@@ -5,16 +5,43 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
   <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>vCode</servlet-name>
-    <servlet-class>servlet.vCode</servlet-class>
+    <servlet-class>loginRegister.vCode</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>loginRegister.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>loginRegister.registerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>resetPswServlet</servlet-name>
+    <servlet-class>loginRegister.resetPswServlet</servlet-class>
+  </servlet>
+
+
+
+
 
   <servlet-mapping>
     <servlet-name>vCode</servlet-name>
-    <url-pattern>/servlet/vCode</url-pattern>
+    <url-pattern>/loginRegister/vCode</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginRegister/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/loginRegister/registerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>resetPswServlet</servlet-name>
+    <url-pattern>/loginRegister/resetPswServlet</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
